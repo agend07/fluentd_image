@@ -9,4 +9,3 @@ RUN ulimit -n 65536
 EXPOSE 24224
 
 ENTRYPOINT ["/usr/sbin/td-agent"]
-CMD ["-v"]
