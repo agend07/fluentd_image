@@ -1,7 +1,7 @@
-FROM ubuntu:12.04
+FROM ubuntu:14.04
 
-RUN apt-get update && apt-get install -y -q curl libcurl3 sudo ruby-dev
-RUN curl -L http://toolbelt.treasuredata.com/sh/install-ubuntu-precise.sh | sh
+RUN apt-get update && apt-get install -y -q curl libcurl4-openssl-dev sudo ruby-dev
+RUN curl -L https://td-toolbelt.herokuapp.com/sh/install-ubuntu-trusty-td-agent2.sh | sh
 
 ENV LD_PRELOAD /usr/lib/fluent/jemalloc/lib/libjemalloc.so
 RUN ulimit -n 65536
